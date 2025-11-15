@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.hero');
 });
 
 Route::get('/dashboard', function () {
@@ -18,8 +18,26 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/template', function () {
-    return view('template.template');
+// Route::get('/template', function () {
+//     return view('frontend.hero');
+// });
+
+Route::get('/about', function () {
+    return view('frontend.about');
 });
+
+Route::get('/courses', function () {
+    return view('frontend.courses');
+});
+
+Route::get('/team', function () {
+    return view('frontend.team');
+});
+
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
+
+
 
 require __DIR__.'/auth.php';
